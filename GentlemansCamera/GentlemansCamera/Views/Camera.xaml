@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/fdorms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             mc:Ignorable="d"
+             x:Class="GentlemansCamera.Views.Camera"
+             BackgroundColor="LightGray"
+             Title="The Thieves Gallery">
+    <ContentPage.Content Visual="Material">
+        <StackLayout>
+            <skia:SKCanvasView x:Name="Canvas" PaintSurface="OnCanvasViewPaintSurface" IsEnabled="True" IsVisible="True" WidthRequest="200" HeightRequest="200">
+            </skia:SKCanvasView>
+            <Editor x:Name="EncodedMessage" Placeholder="Encoded Message" Margin="15" TranslationY="0" HeightRequest="150"/>
+            <Button x:Name="OpenImageButton" Clicked="OpenImage" Text="Open Image" BackgroundColor="LightSlateGray" TextColor="White" WidthRequest="200" TranslationY="100" HeightRequest="50" HorizontalOptions="Center"/>
+            <Button x:Name="ImplementMessage" Clicked="Implement" Text="Implement Message" BackgroundColor="Accent" TextColor="White" TranslationY="0" Margin="20" WidthRequest="300" HeightRequest="60" HorizontalOptions="Center"/>
+            <Entry x:Name="EncryptionKey" Placeholder="Encryption Key" Text="" Margin="10" VerticalOptions="End" TranslationY="20"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
